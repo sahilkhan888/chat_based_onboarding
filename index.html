@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop Details — Print the Receipt</title>
+<meta name="description" content="Tap the printer to print a receipt with the workshop date, time and language.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main>
+  <!-- ============ Workshop receipt section ============ -->
+  <section class="receipt-section" aria-labelledby="workshop-heading">
+    <div class="shell">
+
+      <header class="section-head">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Next workshop</p>
+        <h2 id="workshop-heading">Get the details.<br>Printed.</h2>
+        <p class="lede">
+          No forms, no scrolling. Hit the print key and the machine hands you
+          everything you need to know — date, time, language and all.
+        </p>
+      </header>
+
+      <div class="machine">
+        <!-- Printer body: the click target -->
+        <div class="printer">
+          <div class="printer__top">
+            <span class="printer__brand" aria-hidden="true">
+              <span class="led" data-led></span> ATELIER&nbsp;/&nbsp;TP-88
+            </span>
+            <button
+              type="button"
+              class="printer__key"
+              id="print-btn"
+              data-print
+              aria-expanded="false"
+              aria-controls="workshop-receipt">
+              <span class="printer__key-label" data-print-label>Print details</span>
+            </button>
+          </div>
+          <div class="printer__slot" aria-hidden="true">
+            <span class="printer__slot-lip"></span>
+          </div>
+        </div>
+
+        <!-- Paper feed: clipped so the receipt appears to come out of the slot -->
+        <div class="feed" data-feed>
+          <article
+            class="paper"
+            id="workshop-receipt"
+            data-paper
+            aria-live="polite">
+
+            <div class="paper__inner">
+              <p class="rule" aria-hidden="true"></p>
+              <p class="paper__title" style="--i:0">Workshop Ticket &mdash; No. 0042</p>
+              <p class="rule" aria-hidden="true"></p>
+
+              <h3 class="paper__name" style="--i:1">Design Systems in Practice</h3>
+              <p class="paper__sub" style="--i:2">
+                A hands-on session on tokens, theming and shipping a component library your team will actually use.
+              </p>
+
+              <dl class="specs">
+                <div class="spec" style="--i:3">
+                  <dt>Date</dt>
+                  <dd><time datetime="2026-03-21">Sat, 21 March 2026</time></dd>
+                </div>
+                <div class="spec" style="--i:4">
+                  <dt>Time</dt>
+                  <dd><time datetime="2026-03-21T10:00+01:00">10:00 &ndash; 13:00</time> <span class="muted">GMT+1</span></dd>
+                </div>
+                <div class="spec" style="--i:5">
+                  <dt>Language</dt>
+                  <dd>English <span class="muted">&middot; captions FR / ES</span></dd>
+                </div>
+                <div class="spec" style="--i:6">
+                  <dt>Format</dt>
+                  <dd>Live online <span class="muted">&middot; Zoom</span></dd>
+                </div>
+                <div class="spec" style="--i:7">
+                  <dt>Duration</dt>
+                  <dd>3 hours <span class="muted">&middot; 1 break</span></dd>
+                </div>
+                <div class="spec" style="--i:8">
+                  <dt>Host</dt>
+                  <dd>Amara Osei</dd>
+                </div>
+              </dl>
+
+              <p class="rule rule--dash" aria-hidden="true"></p>
+
+              <div class="totals">
+                <div class="total" style="--i:9">
+                  <span>Seats left</span>
+                  <strong>12 <span class="muted">/ 40</span></strong>
+                </div>
+                <div class="total" style="--i:10">
+                  <span>Price</span>
+                  <strong>$180</strong>
+                </div>
+              </div>
+
+              <p class="rule rule--dash" aria-hidden="true"></p>
+
+              <p class="stamp" style="--i:11">
+                <span class="stamp__chip">Registration open</span>
+              </p>
+
+              <div class="code" style="--i:12">
+                <span class="barcode" aria-hidden="true"></span>
+                <span class="code__id">WS&middot;2026&middot;0321&middot;EN</span>
+              </div>
+
+              <div class="paper__actions" style="--i:13">
+                <a class="btn btn--primary" href="#reserve">Reserve a seat</a>
+                <a class="btn btn--ghost" href="#calendar">Add to calendar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <p class="hint" data-hint>Tap the printer to print your copy.</p>
+
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
